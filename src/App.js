@@ -7,12 +7,9 @@ let api = "7bu4nt3fvtmt";
 function App() {
 	const handleClick = async (e) => {
 		e.preventDefault();
-		console.log("works");
 		await axios
 			.get(`https://www.fantasyfootballnerd.com/service/schedule/json/${api}`)
-			.then((response) => {
-				console.log(response);
-			})
+			.then(console.log(response))
 			.catch((error) => {
 				console.log(error);
 			});
